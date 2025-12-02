@@ -1,1 +1,40 @@
-<h1>Homepage</h1>
+<div class = "tasks-container">
+    <h1>Court Caseworker Tasks</h1>
+
+    <% if @tasks.any? %>
+        <div class="tasks-list">
+            <% @tasks.each do |task| %>
+                <%= render 'tasks/task_card', task: task %>
+            <% end %>
+        </div>
+    <% else %>
+        <div class="no-tasks">
+            <p>No tasks available</p>
+        </div>
+    <% end %>
+</div>
+
+<style>
+    .tasks-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .tasks-container h1 {
+        color: #333;
+        margin-bottom: 24px;
+    }
+
+    .tasks-list {
+        display: grid; 
+        gap: 16px;
+    }
+
+    .no-tasks {
+        text-align: center;
+        padding: 48px 24px;
+        color: #999;
+        font-size: 16px;
+    }
+</style>
