@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "pages#home"
+
+  # Add new resource routes
+  resources :tasks, only: [:new, :create, :index, :show]
 end

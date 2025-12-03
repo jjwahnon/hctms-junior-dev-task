@@ -8,3 +8,6 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.button { display:inline-block; padding:8px 12px; border-radius:4px; text-decoration:none; }
+.button.primary { background:#0d6efd; color:#fff; }
+.button.secondary { background:#6c757d; color:#fff; }

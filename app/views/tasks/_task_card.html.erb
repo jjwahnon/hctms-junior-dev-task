@@ -4,8 +4,8 @@
         <h3 class="task-title">
             <%= task.title%>
         </h3>
-        <span class="task-status status-<%= task.status%>">
-            <%= task.status.humanize%>
+        <span class="task-status status-<%= task.status || 'pending' %>">
+            <%= (task.status || 'pending').humanize %>
         </span>
     </div>
 
