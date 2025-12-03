@@ -4,9 +4,12 @@
         <h3 class="task-title">
             <%= task.title%>
         </h3>
-        <span class="task-status status-<%= task.status || 'pending' %>">
-            <%= (task.status || 'pending').humanize %>
-        </span>
+        <%= form_with(model: task, local: true, method: :patch) do |f| %>
+        <%= f.select :status, 
+            [['Pending', 'pending'], ['In Progress', 'in_progress'], ['Completed', 'completed'], ['Failed', 'failed']], 
+            { selected: task.status },
+            { class: 'task-status-dropdown', onchange: 'this.form.submit()' } %>
+        <% end %>
     </div>
 
     <%# Description %>
@@ -61,6 +64,15 @@
         font-size: 18px;
         color: #333;
         flex: 1;
+    }
+
+    .task-status-dropdown {
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border: 1px solid #ccc;
+        cursor: pointer;
     }
 
     .task-status {

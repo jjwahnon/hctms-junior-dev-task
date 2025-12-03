@@ -21,6 +21,20 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit 
+    @task = Task.find(params[:id])
+  end
+
+  def update 
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to root_path, notice: "Task updated"
+    else
+      flash.now[:alert] = "please fix the errors below."
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private 
 
   def task_params

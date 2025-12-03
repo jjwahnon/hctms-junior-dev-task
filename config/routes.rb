@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   root "pages#home"
 
   # Add new resource routes
-  resources :tasks, only: [:new, :create, :index, :show]
+  resources :tasks, only: [:new, :create, :index, :show, :edit, :update]
 end
