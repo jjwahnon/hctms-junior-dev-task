@@ -1,24 +1,34 @@
-# README
+# Apollo - Court Caseworker Task Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails 8 application for managing court caseworker tasks with database persistence.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To launch the application:
 
-* System dependencies
+```bash
+cd apollo
+bin/rails server
+```
 
-* Configuration
+The application will be available at `http://localhost:3000`
 
-* Database creation
+## Features
 
-* Database initialization
+- Create, view, and edit tasks
+- Track task status (Pending, In Progress, Completed, Failed)
+- Set due dates/times for tasks
+- Add optional task descriptions
+- View overdue task indicators
 
-* How to run the test suite
+## Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+If this is your first time running the application:
 
-* Deployment instructions
+```bash
+bin/rails db:setup
+bin/rails db:seed
+bin/rails server
+```
 
-* ...
+This will create the database, run migrations, seed sample court caseworker tasks, and start the server.
