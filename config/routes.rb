@@ -13,6 +13,14 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#home"
 
+  # Authentication routes
+  get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+  
+  get "signup", to: "registrations#new"
+  post "signup", to: "registrations#create"
+
   # Add new resource routes
   resources :tasks, only: [:new, :create, :index, :show, :edit, :update]
 end
