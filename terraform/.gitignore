@@ -1,0 +1,41 @@
+# Terraform Configuration Files to Ignore
+# State files
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+
+# Backend files
+.terraform/
+.terraform.lock.hcl
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+
+# Logs
+*.log
+crash.log
+crash.*.log
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Python
+.Python
+*.pyc
+__pycache__/
+
+# Plan files
+*.tfplan
+tfplan
+
+# Backups
+*.backup
+*.bak
