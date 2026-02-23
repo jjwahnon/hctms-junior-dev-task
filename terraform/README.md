@@ -24,10 +24,18 @@ docker push <ECR_URL>:latest
 
 ## 📚 Documentation
 
+### 🎯 Start Here
+- **[TESTING-START-HERE.md](TESTING-START-HERE.md)** - ⭐ **Choose your testing path** (5-45 minutes)
+
+### Main Guides
 - **[QUICK_START.md](QUICK_START.md)** - Get up and running in 5 minutes
-- **[TESTING-QUICK-REFERENCE.md](TESTING-QUICK-REFERENCE.md)** - ⭐ **Quick testing commands**
-- **[TESTING-GUIDE.md](TESTING-GUIDE.md)** - Complete testing workflow  
 - **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - Comprehensive step-by-step guide
+
+### Testing & Validation
+- **[TESTING-QUICK-REFERENCE.md](TESTING-QUICK-REFERENCE.md)** - Quick testing commands reference
+- **[TESTING-GUIDE.md](TESTING-GUIDE.md)** - Complete manual testing workflow
+
+### Advanced Topics
 - **[COST-OPTIMIZATION.md](COST-OPTIMIZATION.md)** - Zero-cost idle setup
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - Infrastructure design and components
 - **[README-ENV.md](README-ENV.md)** - Environment-specific configurations
